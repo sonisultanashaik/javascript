@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   find a even numbers in a string and add even and odd sum 
+    var str=String(234546937);
+    var evensum=0;
+    var oddsum=0;
+    for(a=0;a<str.length;a++){
+        if( str[a]%2==0){
+            console.log(str[a]);
+            evensum+=Number(str[a]);
+            }
+        else{
+          oddsum+=Number(str[a]);
+        }
+    }
+    console.log("evensum"+" ="+evensum,"oddsum"+"="+oddsum);
+
+    // tables from 1 to 5
+        for(i=1;i<=10;i++){
+            console.log("table"+"-"+i);
+            for(j=1;j<=10;j++){
+                console.log(i+"*"+j+"="+i*j);   
+            } 
+           
+        }
+        // find the even numbers in an array and add even and odd sum 
+        var ary=[23,54,67,64,46,95,98];
+        var evensum=0;
+        var oddsum=0;
+        for(a=0;a<ary.length;a++){
+           if( ary[a]%2==0){
+            console.log(ary[a]);
+            evensum+=(ary[a]);
+            }
+        else{
+            oddsum+=(ary[a]);
+        }
+    }
+    console.log("evensum"+" ="+evensum,"oddsum"+"="+oddsum);
+
+
+    </script>
+</body>
+</html>

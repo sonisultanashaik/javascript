@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h2>Welcome Page</h2>
+    <p id="welcomeMessage"></p>
+
+    <script>
+        // Retrieve the stored values from localStorage
+        const username = localStorage.getItem('username');
+        const password = localStorage.getItem('password');
+
+        // Check if the user is logged in
+        if (username && password) {
+            document.getElementById('welcomeMessage').innerText = `Welcome, ${username}! Your password is: ${password}`;
+        } else {
+            document.getElementById('welcomeMessage').innerText = 'No user is logged in.';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  heading 
+    let heading=document.createElement("h1");
+    heading.innerText= "SHAIK SONI SULTANA";
+    heading.style.textAlign="center";
+    heading.style.color="red";
+    
+    // details
+    let details=document.createElement("p");
+    details.innerHTML="<b>Mobile:</b> +91 6304990275"+", "+" <b>Email:</b>sonysonyasultana@gmail.com";
+    details.style.marginLeft="34%";
+   
+    // linkedin
+    let linkedin=document.createElement("p");
+    linkedin.innerHTML= "<b>LinkedIn:</b>https://www.linkedin.com/in/shaik-soni-sultana-a6508b267/";
+    linkedin.style.marginLeft="34%";
+    
+    // github
+    let github=document.createElement("p");
+    github.innerHTML= "<b>GitHub:</b>https://github.com/sonisultanashaik";
+    github.style.marginLeft="38%";
+
+    // Profile summary 
+    let Profile=document.createElement("h4");
+    Profile.innerHTML="PROFILE SUMMARY<hr>";
+    let content=document.createElement("p");
+    content.innerHTML="Aspiring software engineer currently building a strong foundation in key technologies like <b><mark>Python, JavaScript, HTML, CSS, and Bootstrap</mark></b>. Eager to apply these skills in real-world scenarios, I am actively learning software development principles and version control using Git and GitHub. Passionate about contributing to innovative projects, I aim to collaborate with diverse teams to deliver impactful technology solutions."
+
+    // education
+    let education=document.createElement("h4");
+    education.innerHTML="EDUCATION<hr>";
+    let content1=document.createElement("p");
+    content1.innerHTML="<b>Visvodaya Engineering College</b><br>Electronics and Communication Engineering <br><b> Sri Sai Junior College </b><br>Board of Intermediate Education (MPC)";  
+     
+     // years
+    let year=document.createElement("p");
+    year.innerHTML="<b>2020-2024</b><br>73%<br><b>2018-2020</b><br>79%<br>";
+    year.style.marginTop="-6%";
+    year.style.marginLeft="90%";
+
+    // project
+    let project=document.createElement("h4");
+    project.innerHTML="PROJECTS<hr>";
+    let guarder=document.createElement("h4");
+    guarder.innerText="Albedo Project| HTML, CSS, Bootstrap";
+    let head=document.createElement("p");
+    head.innerHTML="<b>Responsive Design:</b>The Albedo project website uses flex and grid properties to create a responsive layout for various devices. And also using animations and media queries for responsive.";
+    let head1=document.createElement("p")
+    head1.innerHTML="<b>Navbar and Cards:</b>The site features a structured navbar, grid based cards and flex based images for displaying pillets information, enhancing navigation, and content presentation";
+    let head2=document.createElement("p")
+    head2.innerHTML="<b>A Robotics Based Surveillance System In Poultry Farms:</b><br><br>The <q>Robotics-based Surveillance System for Livestock Wellbeing</q> represents a novel approach to livestock management, cutting-edge technology to ensure optimal conditions for animal health and welfare. Through the integration of Arduino Mega, sensors, motors, and Bluetooth modules, the system offers a robust and versatile solution for monitoring environmental parameters in livestock enclosures.";
+
+    //certificates
+    let certificates=document.createElement("h4");
+    certificates.innerHTML="CERTIFICATES<hr>";
+    let ulcer=document.createElement("ul");
+    let li1=document.createElement("li");
+    let li2=document.createElement("li");
+    let li3=document.createElement("li");
+    let li4=document.createElement("li");
+    li1.innerHTML="Introduction to the Internet of Things";
+    li2.innerHTML="Full Stack Paython";
+    li3.innerHTML="Future Skill Expert";
+    li4.innerHTML="Radar Engineer";
+    ulcer.append(li1,li2,li3,li4)
+
+    // skills
+    let skills=document.createElement("h4");
+    skills.innerHTML="SKILLS<hr>";
+    ulski=document.createElement("ul");
+    let li5=document.createElement("li");
+    let li6=document.createElement("li");
+    let li7=document.createElement("li");
+    let li8=document.createElement("li");
+    li5.innerHTML="<b>Technical Skills:</b><i>HTML, CSS, JAVASCRIPT</i>";
+    li6.innerHTML="<b>Developer Tools:</b><i>Git, GitHub, VS code</i>";
+    li7.innerHTML="<b>Other Skills:</b>Word, PowerPoint, MS Office";
+    li8.innerHTML="<b>Soft Skills:</b>Communication, Public speaking, Problem-solving, Leadership, flexibility, Adaptability";
+    ulski.append(li5,li6,li7,li8);
+
+    // append
+     document.body.append(heading, details, linkedin, github, Profile, content, education, content1, year, project, guarder, head, head1, head2, certificates, ulcer, skills, ulski,);
+    </script>
+    </html>
+    </script>
+</body>
+</html>

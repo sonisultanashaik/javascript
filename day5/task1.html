@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // temperature check
+        var a= +prompt("enter the temperature");
+        var b= a>30? "Hot":(a>20) && (a<=30)?"warm": (a>10) && (a<=19)? "cool":a<10?"cold":"";
+        console.log(b);
+
+        // age group
+        var a= +prompt("enter the age");
+        var b= (a>0) && (a<=12)? "Child": (a>=13)&&(a<=19)?"Teen":(a>=20)&&(a<=64)?"Adult": a>=65? "senior":"";
+        console.log(b);
+
+        // grade classification
+        var a= +prompt("enter the marks");
+        var b= a>=90? "A Grade": a>=75? "B Grade": a>=60? "C Grade": a>=45? "D Grade": a<45? "F Grade":"";
+        console.log(b);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    img{
+        border:2px solid blue;
+        margin-left: 21%;
+        margin-top: 10%;
+    }
+    button{
+        border-radius: 30%;
+        background-color: rgb(179, 146, 210);
+        padding: 1%;
+    }
+    </style> 
+</head>
+<body>
+    <div>
+        <img src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" id="myimg" width="50%" height="20%">
+    </div>
+    <br>
+   <center>
+    <button id="html">html</button>
+    <button id="css">css</button>
+    <button id="javascript">javascript</button></center>
+    <script>
+        let html=document.getElementById("html")
+        html.addEventListener("click",()=>{
+            myimg.src="https://www.cnet.com/a/img/resize/b9b09bd80b3129a6a5da79d9bd17487b977c9677/hub/2014/10/27/40194e6e-2544-419e-a340-f7c17b2e83c5/html5-wow-image-w3c.jpg?auto=webp&width=768"
+        });
+        let css=document.getElementById("css")
+        css.addEventListener("click",()=>{
+            myimg.src="https://images.prismic.io/turing/652ebea8fbd9a45bcec8188d_What_Goes_Behind_Writing_a_Flawless_CSS_Code_37742e2bcf.webp?auto=format,compress"
+        });
+        let javascript=document.getElementById("javascript")
+        javascript.addEventListener("click",()=>{
+            myimg.src="https://www.codecademy.com/resources/blog/wp-content/uploads/2022/12/what-is-javascript-used-for.png"
+        });
+    </script>
+
+    
+</body>
+</html>

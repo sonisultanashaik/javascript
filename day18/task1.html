@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Task 1: Double the Numbers
+    let arr=[1, 2, 3, 4, 5];
+    var newarr=arr.map((val,ind,arr)=>{
+        return val*2
+    })
+    console.log(newarr);
+
+ 
+    // Task 2: Using map
+    // Objective: Create a new array with each element squared.
+    // Instructions: Given an array of numbers, use the map method to create a new array where each element is the square of the original element.
+    let arr2=[1, 2, 3, 4, 5];
+    var newarr=arr2.map((val,ind,arr2)=>{
+        return val*val
+     })
+    console.log(newarr);
+
+
+    // <!-- Task 3: Using filter
+    // Objective: Filter out even numbers.
+    // Instructions: Given an array of numbers, use the filter method to create a new array that contains only the odd numbers.
+    
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const filteredNumbers = numbers.filter(function(numbers) {
+    return numbers %2 !==0;
+    });
+    console.log(filteredNumbers);
+
+
+    // Task 4: Filter Long Words
+    // Objective: Filter out words longer than 5 characters.
+    // Instructions: Given an array of words, use the filter method to create a new array that contains only words with 5 or fewer characters.
+
+    const arr3= ["apple", "banana", "pear", "grape", "cherry", "melon"];
+    const filteredWords = filterLongWords(arr3);
+    function filterLongWords(words) {
+    return words.filter(word => word.length <= 5);
+    }
+        console.log(filteredWords);
+
+    </script>
+</body>
+</html>

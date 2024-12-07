@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+            text-align: center;    
+     }
+     h1{
+        text-align: center;
+        padding-bottom: 30px;
+        
+     }
+    .button{
+            padding: 60px;
+            font-size: 1.5em;
+            color: #000;
+            border-radius: 10px;
+            cursor: pointer;
+           }
+    </style>
+</head>
+<body>
+    <h1>COLOR GENERATOR</h1>
+    <div class="container">
+    <button onclick="fun()" class="button">Generate</button>
+    </div>
+    <Script>
+    let  arr = ["red", "blue", "yellow", "navy blue", "pink", "green", "purple", "gray", "coral", "fuchsia", "maroon", "emerala", "cyan", "orange", "indigo", "magenta", "teal", "chacoal", "golden", "crimson", "azure"]
+    let count=0;
+    function fun(){
+    document.body.style.backgroundColor=arr[count];
+    count++;
+    }
+    </Script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architecture</title>
+    <style>
+        .nav{
+            background-color:rgb(208, 182, 182);
+            display: flex;
+            color:rgb(17, 12, 12);
+            background-attachment: fixed; 
+            width: 100%;
+            height: 10%;
+            position: fixed;
+        }
+        h2{
+            margin-left: 5%;
+        }
+        ul{
+            font-weight: bold;
+            list-style: none;
+            display: flex;
+            gap:3em;
+            margin-left:55%;
+            padding-top: 1%;
+        }     
+/* <--cards--> */
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    height:100vh;
+    width:100wh;
+    overflow-x:hidden;
+}
+.container{
+    padding:1%;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:5px;
+
+    
+}
+.card{
+    width:70%;
+    height:47vh;
+    flex-basis:25%;
+    position:relative;
+}
+.content{
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:auto;
+    background-color: black;
+    color:white;
+    font-size:17px;
+    font-family:arial,helvetica,sans-serif;
+    padding:2% 0 2% 4%;
+}
+.soni>div>img{
+ height:100vh;
+ width: 100%;
+
+}
+img{
+    width:310px;
+    height:90%;
+}
+
+
+    </style>
+    </head>
+<body>
+    <div class="nav">
+        <h2>BR Architecture</h2>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>projects</li>
+        </ul>
+    </div> 
+    <div class="soni">
+        <div>
+        <img src="https://www.w3schools.com/w3images/architect.jpg" alt="">
+        </div></div>
+    <br>
+    <h1>Projects</h1>
+    <hr>
+    <!-- //cards// -->
+    <div class="container"></div>
+    <script>
+    let body=document.querySelector("body")
+    let container=document.querySelector(".container");
+    let heading=["house1.jpg","house2.jpg","house3.jpg","house4.jpg","house5.jpg","house6.jpg","house7.jpg","house8.jpg"];
+    let description=["summer house", "brick house","renovated","born house","summer house", "brick house","renovated","born house"];
+    
+    for(i=0;i<heading.length;i++){
+        let card=document.createElement("div");
+        card.setAttribute("class","card");
+        let child1=document.createElement("img");
+        let child2=document.createElement("div");
+        child2.setAttribute("class","content");
+        child1.src=heading[i];
+        child2.innerText=description[i];
+        body.append(container);
+        card.append(child1,child2);
+        container.append(card);
+    }
+    console.log(container);
+    </script>
+</body>
+</html>

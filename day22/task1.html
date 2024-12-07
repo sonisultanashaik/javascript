@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup Page</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" required>
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" required>
+        <button type="button" onclick="signUp()">Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <h3>Users</h3>
+    <div id="userCards"></div>
+
+    <script>
+        // Base URL for the JSON server
+        const baseURL = 'http://localhost:3000';
+
+        // Function to sign up a new user
+        async function signUp() {
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+
+            // Create a new user object
+            const newUser = { username, password };
+
+            // Send a POST request to JSON server
+            const response = await fetch(`${baseURL}/users`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newUser)
+            });
+
+            if (response.ok) {
+                alert('Sign up successful!');
+                document.getElementById('signupForm').reset();
+                displayUsers();
+            } else {
+                alert('Sign up failed.');
+            }
+        }
+
+        // Function to log in a user
+        async function login() {
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Fetch all users and check for matching credentials
+            const response = await fetch(`${baseURL}/users`);
+            const users = await response.json();
+            const user = users.find(u => u.username === username && u.password === password);
+
+            if (user) {
+                alert(`Welcome, ${user.username}!`);
+                document.getElementById('loginForm').reset();
+                displayUsers();
+            } else {
+                alert('Login failed. Incorrect username or password.');
+            }
+        }
+
+        // Function to display users as cards
+        async function displayUsers() {
+            const response = await fetch(`${baseURL}/users`);
+            const users = await response.json();
+            const userCardsContainer = document.getElementById('userCards');
+
+            // Clear any existing cards
+            userCardsContainer.innerHTML = '';
+
+            // Create a card for each user
+            users.forEach(user => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <h4>${user.username}</h4>
+                    <p>Username: ${user.username}</p>`;
+                userCardsContainer.appendChild(card);
+            });
+        }
+        // Load users on page load
+        window.onload = displayUsers;
+    </script>
+</body>
+</html>

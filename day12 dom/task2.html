@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password matcher</title>
+    <style>
+        input{
+            margin-top:10%;
+            width:20%;
+        }
+        .container{
+            margin-top:1%;
+            padding:2% 0 0 20%;
+            color:green;
+        }
+        .position{
+            font-size: larger;
+            margin-left: 18%;
+            margin-top:5%;
+            line-height: 0%;
+            gap:2em;
+    }
+    button{
+        margin-top: 2%;
+        margin-left:30%;
+    }
+    </style>
+</head>
+<body>
+    <div class="position">
+    <form action="">
+        <label for="inp1">Enter your Password:</label>
+        <input typpe="password" id="inp1">
+        <label for="inp2">Confrim Password:</label>
+        <input typpe="password" id="inp2"><br><br>
+        <button type="submit" value="submit">submit</button>
+    </form>
+    <div class="container"></div></div>
+    <script>
+        let inp1=document.getElementById("inp1");
+        let inp2=document.getElementById("inp2");
+        let button=document.getElementsByTagName("button")[0];
+        button.addEventListener("click",function(event){
+        event.preventDefault();
+        if(inp1.value==""|| inp2.value==""){
+            document.getElementsByClassName("container")[0].innerHTML="Invalid Password";
+        }
+        else if(inp1.value===inp2.value){
+            document.getElementsByClassName("container")[0].innerHTML="Password created succesfully";
+        }
+        else{
+            document.getElementsByClassName("container")[0].innerHTML="password dosn't match";
+        }
+        console.log(inp1.value);
+        console.log(inp2.value);
+        })
+    </script>
+</body>
+</html>
